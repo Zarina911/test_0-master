@@ -352,15 +352,12 @@ header {
 .photo_block {
   background: url("../images/Background_2.jpg") no-repeat center;
   background-size: cover;
-
   .photo_carousel {
     .owl-item img {
       display: block;
-
       margin: 0 auto;
       z-index: 5;
       max-width: 756px;
-      padding-top: 100px;
     }
     .owl-nav {
       display: none;
@@ -368,15 +365,20 @@ header {
     .owl-dots {
       display: none;
     }
+  }
+    .owl-carousel, .owl-carousel .owl-item{
+      top: 50px;
+      border: none;
+  }
 }
-}
+
+
 .team_block {
   display: flex;
   justify-content: center;
   width: 100%;
   padding-top: 90px;
   margin-bottom: 59px;
-
   .team_img {
     width: 150%;
     min-height: 440px;

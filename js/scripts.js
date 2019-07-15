@@ -23,40 +23,6 @@ $(document).ready(function () {
     });
 });
 
-
-// $(document).ready(function () {
-
-    // $('.owl-carousel.brands').owlCarousel({
-    //     loop: true,
-    //     margin: 10,
-    //     nav: true,
-    //     responsive: {
-    //         0: {
-    //             items: 2
-    //         },
-    //         600: {
-    //             items: 3
-    //         },
-    //         850: {
-    //             items: 6
-    //         }
-    //     }
-    // });
-
-//     $('.owl-carousel.photo_carousel').owlCarousel({
-//         loop: true,
-//         margin: 0,
-//         nav: false,
-//         dots: false,
-//         items: 1,
-//         animateOut: 'fadeOut',
-//         animateIn: 'fadeIn',
-//         stagePadding:30,
-//         smartSpeed:450,
-//         autoplay: true,
-//         autoplayTimeout: 3000
-//     });
-// });
 $(document).ready(function () {
     $(".owl-carousel.photo_carousel").owlCarousel({
         loop: true,
@@ -89,9 +55,3 @@ $(document).ready(function () {
         }
     });
 });
-// $(window).load(function() {
-//     var images = $('img');
-//     images.each(function(i) {
-//         $(this).width($(this).width() / 2);
-//     });
-// });

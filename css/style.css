@@ -292,12 +292,14 @@ header {
     display: block;
     margin: 0 auto;
     z-index: 5;
-    max-width: 756px;
-    padding-top: 100px; }
+    max-width: 756px; }
   .photo_block .photo_carousel .owl-nav {
     display: none; }
   .photo_block .photo_carousel .owl-dots {
     display: none; }
+  .photo_block .owl-carousel, .photo_block .owl-carousel .owl-item {
+    top: 50px;
+    border: none; }
 
 .team_block {
   display: flex;
