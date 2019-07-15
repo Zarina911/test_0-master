@@ -458,6 +458,14 @@ header {
       transform: translate(0, 5px);
     }
   }
+  @media screen and (min-width: 1201px) {
+    .team_img {
+      width: 100%;
+      min-height: 440px;
+      background: url("../images/Picture.png") no-repeat;
+      background-size: cover;
+    }
+  }
   @media screen and (max-width: 800px) {
       display: flex;
       flex-direction: column;

@@ -376,6 +376,12 @@ header {
       background-color: #00bedb;
       text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
       transform: translate(0, 5px); }
+  @media screen and (min-width: 1201px) {
+    .team_block .team_img {
+      width: 100%;
+      min-height: 440px;
+      background: url("../images/Picture.png") no-repeat;
+      background-size: cover; } }
   @media screen and (max-width: 800px) {
     .team_block {
       display: flex;
