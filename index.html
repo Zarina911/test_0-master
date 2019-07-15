@@ -11,6 +11,7 @@
 
     <!--  CSS -->
     <link rel="stylesheet" href="normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
 
@@ -19,7 +20,6 @@
 
     <!--JS---jQuery-->
     <script src="js/jquery-2.2.1.min.js"></script>
-    <script src="js/scripts.js"></script>
     <script src="js/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
     <script src="js/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
 
@@ -42,6 +42,21 @@
                     <li><a href="#">contact</a></li>
                 </ul>
             </div>
+
+
+        <div class="wrapper">
+            <input type="checkbox" id="check-menu">
+            <label for="check-menu"></label>
+            <div class="burger-line first"></div>
+            <div class="burger-line second"></div>
+            <div class="burger-line third"></div>
+            <div class="burger-line fourth"></div>
+            <nav class="main-menu">
+               <a class="burger" href="#">home</a>
+                <a class="burger" href="#">about us</a>
+                <a class="burger" href="#">contact</a>
+            </nav>
+        </div>
         </nav>
     </div>
 </header>
@@ -59,22 +74,22 @@
 
 <div class="owl-carousel brands">
     <div class="container_partners">
-        <img src="images/Magellan-122.png">
+       <img src="images/Magellan-122.png" height="41" width="122"/>
     </div>
     <div class="container_partners">
-        <img src="images/Kaiser%20Permanente-143.png">
+        <img src="images/Kaiser Permanente-143.png" height="49" width="143"/>
     </div>
     <div class="container_partners">
-        <img src="images/Anthem-158.png">
+        <img src="images/Anthem-158.png" height="35" width="158"/>
     </div>
     <div class="container_partners">
-        <img src="images/North%20Bay%20Regional%20Center-189.png">
+        <img src="images/North Bay Regional Center-189.png"  height="49" width="189"/>
     </div>
     <div class="container_partners">
-        <img src="images/Partnership%20Health%20Plan%20of%20CA-175.png">
+        <img src="images/Partnership Health Plan of CA-175.png" height="49" width="175"/>
     </div>
     <div class="container_partners">
-        <img src="images/Aetna-140.png">
+        <img src="images/Aetna-140.png" height="35" width="140"/>
     </div>
 </div>
 
@@ -82,7 +97,8 @@
 <div class="middle_block">
     <div>
         <div><h2>Support For People Of All Walks of Life</h2></div>
-        <div><p>Children as young as 2 years old may begin to develop behaviors which need extra support and attention.</p>
+        <div><p>Children as young as 2 years old may begin to develop behaviors
+            which need extra support and attention.</p>
         </div>
     </div>
 </div>
@@ -99,18 +115,18 @@
     </div>
 </div>
 
-
-
+<div class="photo_block">
 <div class="owl-carousel photo_carousel">
-    <div class="photo_block">
+    <div>
         <img class="photo" src="images/photo_middle.png"/>
     </div>
-    <div class="photo_block">
+    <div>
         <img class="photo" src="images/photo_middle_2.png"/>
     </div>
-    <div class="photo_block">
+    <div>
         <img class="photo" src="images/photo_middle_3.png"/>
     </div>
+</div>
 </div>
 
 
@@ -155,5 +171,6 @@
         <p class="copyright">Copyright Ⓒ 2017 McGrews Behavior Services All Rights Reserved</p>
     </div>
 </footer>
+<script src="js/scripts.js"></script>
 </body>
 </html>

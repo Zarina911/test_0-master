@@ -10,7 +10,7 @@ header {
   width: 100%;
   min-height: 120px;
   background-color: transparent;
-position: absolute;
+  position: absolute;
   .header_menu {
     margin: 0;
     .navbar {
@@ -29,9 +29,11 @@ position: absolute;
         ul {
           margin: 0;
           display: flex;
+          flex-wrap: wrap;
           list-style: none;
           li {
-            padding: 51px 20px 20px;
+            margin-top: 51px;
+            padding-left: 40px;
             a {
               text-transform: uppercase;
               font-family: $Lato;
@@ -66,6 +68,108 @@ position: absolute;
       }
     }
   }
+
+  .wrapper {
+    //margin: 100px auto;
+    width: 320px;
+    //background-color: #000;
+    //position: relative;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 40px;
+    font-family: $Lato;
+    display: none;
+    z-index: 10;
+  }
+  #check-menu {
+    display: none;
+  }
+  label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+  }
+  .burger-line {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: .5s all;
+  }
+  .second, .third {
+    top: 18px;
+  }
+  .fourth {
+    top: 28px;
+  }
+  .main-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+  }
+  .burger {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    background-color: rgba(225, 170, 110, 0.7);
+    text-transform: uppercase;
+    font-family: $Lato;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+  }
+  .burger:hover {
+    background-color: rgba(0, 0, 0, .9);
+  }
+  #check-menu:checked ~ .main-menu {
+    max-height: 500px;
+    font-size: 16px;
+  }
+  #check-menu:checked ~ .first {
+    display: none;
+  }
+  #check-menu:checked ~ .second {
+    transform: rotate(45deg);
+  }
+  #check-menu:checked ~ .third {
+    transform: rotate(-45deg);
+  }
+  #check-menu:checked ~ .fourth {
+    display: none;
+  }
+  @media screen and (max-width: 596px) {
+    .logo{
+      width: 115%;
+    }
+    .menu {
+      display: none;
+    }
+    .wrapper {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 362px) {
+    .logo{
+      width: 165%;
+    }
+  }
 }
 
 .hero {
@@ -74,12 +178,12 @@ position: absolute;
   background: url("../images/Background_0.png") no-repeat center;
   background-size: cover;
   .text_block {
-    padding-right: 30px;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 175px;
+    min-width: 320px;
     h2 {
       font-size: 48px;
       font-family: $Lato;
@@ -141,73 +245,14 @@ position: absolute;
       transform: translate(0, 5px);
     }
   }
-  @media screen and (max-width: 850px) {
-
+  @media screen and (max-width: 340px) {
+      .text_block {
+        padding-left: 5px;
+        padding-right: 5px;
+        justify-content: center;
+      }
   }
 }
-
-//  .text_block {
-//    padding-right: 30px;
-//    padding-left: 30px;
-//    width: 460px;
-//    h1 {
-//      font-size: 48px;
-//      font-family: $Lato;
-//      color: rgb(255, 255, 255);
-//      font-weight: 900;
-//      line-height: 1.2;
-//      text-align: left;
-//      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-//    }
-//    h1:hover::after {
-//      opacity: 1;
-//    }
-//    h1:after {
-//      width: 96px;
-//      height: 4px;
-//      background-color: rgb(0, 181, 210);
-//      display: block;
-//      content: "";
-//      opacity: 0;
-//      transition: 0.3s;
-//      position: relative;
-//      z-index: 1;
-//      top: 18px;
-//      left: 177px;
-//    }
-//    p {
-//      font-size: 18px;
-//      font-family: $Lato;
-//      color: rgb(255, 255, 255);
-//      line-height: 1.667;
-//      text-align: left;
-//      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
-//      padding-bottom: 45px;
-//      margin: 0;
-//    }
-//    a {
-//      display: block;
-//      width: 262px;
-//      background-color: rgb(225, 170, 110);
-//      padding: 23px;
-//      text-transform: uppercase;
-//      text-decoration: none;
-//      font-size: 20px;
-//      font-family: $Lato;
-//      color: rgb(255, 255, 255);
-//      line-height: 1.2;
-//      text-align: center;
-//      box-shadow: 0 10px 0 rgba(186, 142, 91, 1), 0 12px 10px rgba(0, 0, 0, 0.3);
-//      transition: 0.5s;
-//    }
-//    a:hover {
-//      background-color: rgba(232, 175, 114, 1);
-//      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
-//      transform: translate(0, 5px);
-//    }
-//
-//  }
-//}
 
 .owl-carousel {
   border-top: 1px solid rgb(204, 204, 204);
@@ -227,7 +272,7 @@ position: absolute;
   .owl-nav {
     display: none;
   }
-  .owl-dots{
+  .owl-dots {
     display: none;
   }
 }
@@ -304,42 +349,34 @@ position: absolute;
   }
 }
 
-
-.photo_carousel {
-  min-height: 600px;
+.photo_block {
   background: url("../images/Background_2.jpg") no-repeat center;
   background-size: cover;
-  padding-top: 100px;
-  position: relative;
-  .photo_block {
-    display: flex;
-    //max-width: 756px;
-    margin:0 auto;
-    bottom: -40px;
-    img {
-      //display: block;
-      //margin: 0 auto;
-      //z-index: 2;
-      //position: absolute;
-      //left: 0;
-      //right: 0;
-      width: auto;
+
+  .photo_carousel {
+    .owl-item img {
+      display: block;
+
+      margin: 0 auto;
+      z-index: 5;
+      max-width: 756px;
+      padding-top: 100px;
     }
     .owl-nav {
       display: none;
     }
-    .owl-dots{
+    .owl-dots {
       display: none;
     }
-  }
 }
-
+}
 .team_block {
   display: flex;
   justify-content: center;
   width: 100%;
   padding-top: 90px;
   margin-bottom: 59px;
+
   .team_img {
     width: 150%;
     min-height: 440px;
@@ -351,6 +388,8 @@ position: absolute;
     padding-top: 40px;
     padding-left: 30px;
     padding-bottom: 42px;
+    display: flex;
+    justify-content: flex-start;
     .team_text_italic {
       font-size: 18px;
       font-family: $Lato;
@@ -417,11 +456,53 @@ position: absolute;
       transform: translate(0, 5px);
     }
   }
+  @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding-top: 90px;
+      margin-bottom: 59px;
+      .team_img {
+        width: 100%;
+        min-height: 440px;
+        background: url("../images/Picture.png") no-repeat;
+        background-size: cover;
+      }
+  }
+  @media screen and (max-width: 360px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   min-width: 320px;
+    padding-top: 90px;
+    margin-bottom: 59px;
+    .team_img {
+      width: 100%;
+      min-height: 440px;
+      background: url("../images/Picture.png") no-repeat;
+      background-size: cover;
+    }
+     .team_text {
+       .team_text_italic {
+         font-size: 16px;
+       }
+       h2 {
+         font-size: 40px;
+       }
+       p {
+         font-size: 16px;
+       }
+       .btn_blue {
+         width: 220px;
+         font-size: 18px;
+       }
+     }
+  }
 }
 
 footer {
   border-top: 3px solid rgb(204, 204, 204);
-
   .footer_menu {
     ul {
       margin: 0;
@@ -450,21 +531,6 @@ footer {
           text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
         }
       }
-      //li:hover::after{
-      //  opacity: 1;
-      //}
-      //li::after{
-      //  min-width: 55px;
-      //  height: 5px;
-      //  background-color: rgb(0, 181, 210);
-      //  display: block;
-      //  content: "";
-      //  opacity: 0;
-      //  transition: 0.3s;
-      //  position: relative;
-      //  z-index: 1;
-      //  top: 41px;
-      //}
     }
   }
   .decor {
@@ -502,7 +568,6 @@ footer {
       height: 1px;
       width: 80%;
       background-color: rgb(238, 238, 238);
-
     }
     .copyright {
       font-size: 12px;
